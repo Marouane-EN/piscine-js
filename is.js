@@ -1,5 +1,5 @@
 const is = {};
-is.num = (n) => typeof n === "number" && !isNaN(n);
+is.num = (n) => typeof n === "number";
 is.nan = (n) => isNaN(n);
 is.str = (n) => typeof n === "string";
 is.bool = (n) => typeof n === "boolean";
