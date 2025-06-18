@@ -1,8 +1,8 @@
 function more(params) {
-    return params++
+    return params + 1
 }
 function less(params) {
-    return params--
+    return params - 1
 }
 function add(params, arg) {
     return params + arg
