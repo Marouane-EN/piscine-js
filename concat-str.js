@@ -1,3 +1,4 @@
 function concatStr(s, str) {
-    return s + str
+
+    return String(s) + String(str)
 }
