@@ -45,7 +45,10 @@ const superTypeOf = (type) => {
   if (type === null) {
     return "null";
   }
+
   const s = typeof type;
 
-  return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+  return s !== "undefined"
+    ? s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()
+    : "undefined";
 };
