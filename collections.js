@@ -39,6 +39,9 @@ const superTypeOf = (type) => {
   if (type instanceof Set) {
     return "Set";
   }
+  if (Array.isArray(type)) {
+    return "Array";
+  }
   if (type === null) {
     return "null";
   }
