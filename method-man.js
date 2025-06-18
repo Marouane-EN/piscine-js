@@ -1,19 +1,24 @@
 function words(str) {
-    return str.split(" ")
+    const arr = str.split(" ")
+    return arr
 }
 
 function sentence(arr) {
-    return arr.join(" ")
+    const s = arr.join(" ")
+    return s
 }
 
 function yell(str) {
-    return str.toUpperCase()
+    const s = str.toUpperCase()
+    return s
 }
 
 function whisper(str) {
-    return "*" + str.toLowerCase() + "*"
+    const s = "*" + str.toLowerCase() + "*"
+    return s
 }
 
 function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase
+    const s = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
+    return s
 }
