@@ -7,6 +7,6 @@ function less(params) {
 function add(params, arg) {
     return params + arg
 }
-function more(params, arg) {
+function sub(params, arg) {
     return params - arg
 }
