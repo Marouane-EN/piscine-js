@@ -30,7 +30,7 @@ const objToMap = (obj) => new Map(Object.entries(obj));
 
 const arrToObj = (arr) => Object.assign({}, arr);
 
-const strToObj = (str) => (obj = { ...strToArr(str) });
+const strToObj = (str) => Object.assign({}, strToArr(str));
 
 const superTypeOf = (type) => {
   if (type instanceof Map) {
