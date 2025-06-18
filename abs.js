@@ -1,6 +1,4 @@
-const isPositive = (n) => {
-    return n >= 0
-}
+const isPositive = (n) => n >= 0
 
 const abs = (n) => {
     if (!isPositive(n)) {
