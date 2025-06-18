@@ -1,12 +1,12 @@
 const clone1 = {
-    name: '',
-    age: 0,
-    country: ''
+    name: 'Rick',
+    age: 77,
+    country: 'US',
 }
 const clone2 = {
-    name: '',
-    age: 0,
-    country: ''
+    name: 'Rick',
+    age: 77,
+    country: 'US',
 }
 let samePerson = person
 
