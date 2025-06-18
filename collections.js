@@ -29,7 +29,7 @@ const objToArr = (obj) => {
 
 const objToMap = (obj) => new Map(Object.entries(obj));
 
-const arrToObj = (arr) => (obj = { ...arr });
+const arrToObj = (arr) => Object.assign({}, arr);
 
 const strToObj = (str) => (obj = { ...strToArr(str) });
 
@@ -45,3 +45,4 @@ const superTypeOf = (type) => {
   }
   return typeof type;
 };
+console.log(arrToObj([1, ctx, "pouet"]));
