@@ -9,7 +9,6 @@ const triangle = (s, n) => {
     n--;
   }
   str = str + s;
-  console.log(str);
 
   return str;
 };
