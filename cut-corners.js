@@ -66,15 +66,19 @@ const trunc = (n) => {
   n = Number(n);
   const negative = n < 0;
   let num = 0;
-
+  const bigNumber = false;
   if (negative) {
     n *= -1;
   }
   if (n > 68719476735) {
-    return 0;
+    n = n - 68719476735;
+    bigNumber = true;
   }
   while (num < n) {
     num++;
+  }
+  if (bigNumber) {
+    num += 68719476735;
   }
   if (n == num) {
     return n;
