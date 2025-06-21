@@ -20,15 +20,16 @@ const multiply = (a, b) => {
       negative = true;
     }
   }
+  let sum = 0;
 
-  for (let index = 1; index < b; index++) {
-    a = a + b;
+  for (let index = 0; index < b; index++) {
+    sum = sum + a;
   }
   if (negative == true) {
-    const s = "-" + String(a);
-    a = Number(s);
+    const s = "-" + String(sum);
+    sum = Number(s);
   }
-  return a;
+  return sum;
 };
 const divide = (a, b) => {
   let negative = false;
@@ -62,6 +63,7 @@ const divide = (a, b) => {
 
 const modulo = (a, b) => {
   let negative = false;
+
   if (a < b && a > 0) {
     return a;
   }
@@ -72,12 +74,13 @@ const modulo = (a, b) => {
   if (b < 0) {
     b = changeTheSign(b);
     if (negative == true) {
-      negative = false;
-    } else {
       negative = true;
+    } else {
+      negative = false;
     }
   }
-  while (a < b) {
+
+  while (a > b) {
     a = a - b;
   }
   if (negative == true) {
