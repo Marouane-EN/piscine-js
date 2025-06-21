@@ -66,11 +66,11 @@ const trunc = (n) => {
   n = Number(n);
   const negative = n < 0;
   let num = 0;
-  const bigNumber = false;
+  let bigNumber = false;
   if (negative) {
     n *= -1;
   }
-  if (n > 68719476735) {
+  if (n >= 68719476735) {
     n = n - 68719476735;
     bigNumber = true;
   }
