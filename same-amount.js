@@ -1,5 +1,8 @@
 const sameAmount = (string, regx1, regx2) => {
-  const arr1 = string.match(regx1) || [];
-  const arr2 = string.match(regx2) || [];
-  return arr1.lenght === arr2.lenght;
+  const reg = new RegExp(regx1, "g");
+  const regd = new RegExp(regx2, "g");
+  const arr1 = string.match(reg) || [];
+  const arr2 = string.match(regd) || [];
+
+  return arr1.length == arr2.length;
 };
