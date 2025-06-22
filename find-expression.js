@@ -1,5 +1,3 @@
-const add4 = "+4";
-const mul2 = "*2";
 const findExpression = (n) => {
   let num = 1;
   let result = "1";
