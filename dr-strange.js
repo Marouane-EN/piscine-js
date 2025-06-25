@@ -8,10 +8,10 @@ const addWeek = (date) => {
     // console.log(day);
 
     day = day % 14
-    // console.log(day+1);
+    // console.log(day);
 
-    const arr = ["secondSunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "secondMonday", "secondTuesday", "secondWednesday", "secondThursday", "secondFriday", "secondSaturday"]
-    return arr[day+1];
+    const arr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "secondMonday", "secondTuesday", "secondWednesday", "secondThursday", "secondFriday", "secondSaturday", "secondSunday"]
+    return arr[day];
 }
 
 const timeTravel = (timeObject) => {
@@ -21,4 +21,6 @@ const timeTravel = (timeObject) => {
 
 }
 
-console.log(addWeek(new Date('2025-08-11')));
+// console.log(addWeek(new Date('0001-01-14')));
+
+// console.log(addWeek(new Date('2025-08-11')));
