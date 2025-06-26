@@ -1,9 +1,9 @@
 function firstDayWeek(num, year) {
-    let add = 0
+    //let add = 0
     if (year > 1914) {
-        add+=1
+        return year + "-" + "01" + "-" + "01"
     }
-    const date = new Date(year, 0, 1+add)
+    const date = new Date(year, 0, 1)
     console.log(date);
 
     let day = date.getDay()
