@@ -1,4 +1,4 @@
-function gitDate(date) {
+function gitDate(date, year) {
     let s = ""
     if (date.getDate() < 10) {
         s += "0" + date.getDate() + "-"
@@ -10,43 +10,48 @@ function gitDate(date) {
     } else {
         s += (1 + date.getMonth()) + "-"
     }
-    if (date.getFullYear() < 1000) {
-        s += "0" + date.getFullYear()
-    } else {
-        s += date.getFullYear()
-    }
-    
+    s += year
+
     return s
 }
 function firstDayWeek(num, year) {
     //let add = 0
-    // if (year < 1914) {
-    //     return "01" + "-" + "01" + "-" + year
-    // }
     const date = new Date(year, 0, 1)
     if (num == 1) {
         
-        return gitDate(date)
+        return gitDate(date, year)
     }
+    
     //console.log(date);
-
+    
     let day = date.getDay()
     //console.log("day", day);
-
-    let weekToDays = ((num - 1) * 7)
-    if (day > 1) {
-        weekToDays -= day - 2
-    } else if (day < 1) {
-        weekToDays -= 7
+    
+    let weekToDays = ((num) * 7)
+    //console.log(weekToDays);
+    if (day === 0) day = 7;
+    for (let i = day + 5; i > 0; i--) {
+        //console.log(weekToDays);
+        
+        weekToDays -= 1
     }
+    if (year < 1000) {
+     weekToDays++   
+    }
+    // 
+   // console.log(weekToDays);
+
+    // if (day == 0) {
+    //     weekToDays +=1
+    // }
     //console.log(weekToDays);
 
     const newDate = new Date(year, 0, weekToDays)
     //console.log(newDate);
 
-    return gitDate(newDate)
+    return gitDate(newDate, year)
 }
 
-//console.log(firstDayWeek(52, "1000"));
+console.log(firstDayWeek(23, "0091"));
 
 // Math.trunc
