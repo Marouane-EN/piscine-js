@@ -1,7 +1,7 @@
 function firstDayWeek(num, year) {
     //let add = 0
     if (year > 1914) {
-        return year + "-" + "01" + "-" + "01"
+        return "01" + "-" + "01" + year
     }
     const date = new Date(year, 0, 1)
     console.log(date);
@@ -14,7 +14,7 @@ function firstDayWeek(num, year) {
     }
     const weekToDays = (num - 1) * 7
     const newDate = new Date(year, 1, weekToDays + day)
-    const s = newDate.getFullYear().toString() + "-" + newDate.getMonth().toString() + "-" + newDate.getDate().toString()
+    const s = newDate.getDate().toString() + "-" + newDate.getMonth().toString() + "-" + newDate.getFullYear().toString()
     return s
 }
 
