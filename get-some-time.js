@@ -1,10 +1,10 @@
 function firstDayWeek(num, year) {
     //let add = 0
-    if (year > 1914) {
-        return "01" + "-" + "01" + year
+    if (year < 1914) {
+        return "01" + "-" + "01" + "-" + year
     }
     const date = new Date(year, 0, 1)
-    console.log(date);
+    //console.log(date);
 
     let day = date.getDay()
     if (day > 1) {
@@ -18,6 +18,6 @@ function firstDayWeek(num, year) {
     return s
 }
 
-//console.log(firstDayWeek(1, "1000"));
+// console.log(firstDayWeek(1, "1970"));
 
 // Math.trunc
