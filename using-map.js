@@ -3,10 +3,9 @@ const citiesOnly = (array) => array.map((element) => element.city);
 const upperCasingStates = (array) =>
   array.map((element) => {
     const arr = element.split(" ");
-    arr.forEach(
-      (element) =>
-        element.charAt(0).toUpperCase() + element.slice(1).toLowerCase()
-    );
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1).toLowerCase()
+    }
     return arr.join(" ");
   });
 const fahrenheitToCelsius = (array) =>
