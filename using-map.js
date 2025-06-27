@@ -10,7 +10,7 @@ const upperCasingStates = (array) =>
   });
 const fahrenheitToCelsius = (array) =>
   array.map((element) => {
-    const regx = /\d+/;
+    const regx = /-?\d+/;
 
     const arr = element.match(regx);
     const cel = (Number(arr[0]) - 32) * (5 / 9);
