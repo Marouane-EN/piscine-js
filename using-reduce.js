@@ -14,8 +14,8 @@ const sumOrMul = (array, initialValue = 0) =>
     initialValue
   );
 
-const funcExec = (array, initialValue) =>
+const funcExec = (array, initialValue = 0) =>
   array.reduce(
-    (accumulator, currentValue) => currentValue(accumulator()),
+    (accumulator, currentValue) => currentValue(accumulator),
     initialValue
   );
