@@ -14,7 +14,7 @@ const fahrenheitToCelsius = (array) =>
 
     const arr = element.match(regx);
     const cel = (Number(arr[0]) - 32) * (5 / 9);
-    return String(Math.round(cel)) + "°C";
+    return String(Math.floor(cel)) + "°C";
   });
 
 const trimTemp = (array) =>
