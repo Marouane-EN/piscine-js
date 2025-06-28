@@ -1,7 +1,7 @@
 const filter = (array, func) => {
   const arr = [];
   for (let i = 0; i < array.length; i++) {
-    if (func(array[i], i, arr)) {
+    if (func(array[i], i, array)) {
       arr.push(array[i]);
     }
   }
@@ -10,7 +10,7 @@ const filter = (array, func) => {
 const reject = (array, func) => {
   const arr = [];
   for (let i = 0; i < array.length; i++) {
-    if (!func(array[i], i, arr)) {
+    if (!func(array[i], i, array)) {
       arr.push(array[i]);
     }
   }
