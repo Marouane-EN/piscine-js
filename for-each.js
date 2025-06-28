@@ -1,4 +1,4 @@
-function forEach(array, func, index, arr) {
+function forEach(array, func, arr, index) {
   for (let i = 0; i < array.length; i++) {
     if (index != undefined && arr != undefined) {
       func(array[i], index, arr);
