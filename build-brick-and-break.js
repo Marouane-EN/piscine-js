@@ -29,9 +29,9 @@ export function repair(...ids) {
 
     if (!breakid) return;
     if (i % 3 == 2) {
-      breakid.setAttribute("id", `brick-${i}_in progress`);
+      breakid.setAttribute("repaired", `brick-${i}_in progress`);
     } else {
-      breakid.setAttribute("id", `brick-${i}_repaired`);
+      breakid.setAttribute("repaired", `brick-${i}_repaired`);
     }
   }
 }
