@@ -1,23 +1,18 @@
 export function generateLetters() {
     const s = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    let count = 0
-    let id = setInterval(() => {
+    for (let i = 0; i < 120; i++) {
         const newDive = document.createElement('div')
         newDive.append(s.charAt(Math.floor(Math.random() * s.length)))
         document.body.appendChild(newDive)
-        ++count
         //console.log(newDive);
-        newDive.style.fontSize = `${10 + count}px`
-        if (count < 40) {
+        newDive.style.fontSize = `${11 + i}px`
+        if (i < 40) {
             newDive.style.fontWeight = "300"
-        } else if (count < 80) {
+        } else if (i < 80) {
             newDive.style.fontWeight = "400"
         } else {
             newDive.style.fontWeight = "600"
         }
-        if (count == 120) {
-            clearInterval(id)
-        }
-    }, 100)
 
+    }
 }
