@@ -4,11 +4,12 @@ let count = 0;
 let decrease = false;
 export function pimp() {
   const button = document.querySelector(".button");
-  if (decrease && count < 0) {
+  if (decrease && count == 0) {
+    button.classList.remove(styles[count]);
     button.classList.remove("unpimp");
-    count = 0;
+    
     decrease = false;
-    return;
+    return
   }
   if (decrease) {
     button.classList.remove(styles[count]);
