@@ -10,7 +10,15 @@ export function generateClasses() {
   styleTag.textContent = classes;
 }
 export function generateColdShades() {
-  const array = ["blue", "turquoise", "green", "cyan", "navy", "purple"];
+  const array = [
+    "aqua",
+    "blue",
+    "turquoise",
+    "green",
+    "cyan",
+    "navy",
+    "purple",
+  ];
   colors.forEach((element) => {
     for (let j = 0; j < array.length; j++) {
       if (element.includes(array[j])) {
