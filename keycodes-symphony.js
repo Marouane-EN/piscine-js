@@ -1,5 +1,5 @@
 export function compose() {
-  addEventListener("keyup", (e) => {
+  addEventListener("input", (e) => {
     console.log(e.key);
     if (isLower(e.key)) {
       const newDive = document.createElement("div");
