@@ -4,8 +4,9 @@ export function generateLetters() {
     let id = setInterval(() => {
         const newDive = document.createElement('div')
         newDive.append(s.charAt(Math.floor(Math.random() * s.length)))
+        document.body.appendChild(newDive)
         ++count
-        console.log(newDive);
+        //console.log(newDive);
         newDive.style.fontSize = `${10 + count}px`
         if (count < 40) {
             newDive.style.fontWeight = "300"
